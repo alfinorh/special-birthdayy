@@ -224,6 +224,17 @@
         nextBtn.onclick = nextStep;
         canvas.width = window.innerWidth; canvas.height = window.innerHeight;
         loop();
+
+        // Hujan background (Lily)
+        setInterval(() => {
+            if (particles.filter(p => !p.isBurst && p.type === 'lily').length < 20) {
+                particles.push(new Particle(Math.random()*canvas.width, -30, false, 'lily'));
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
