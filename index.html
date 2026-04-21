@@ -19,13 +19,19 @@
         .btn-action:active { transform: scale(0.95); }
         
         /* KUPU-KUPU TAMBAHAN */
-        .butterfly { position: absolute; width: 60px; z-index: 99; display: none; pointer-events: none; }
+        .butterfly { position: absolute; width: 60px; z-index: 99; display: none; pointer-events: none; animation: floatButterfly 3s ease-in-out infinite; }
         .bf-tl { top: -20px; left: -20px; transform: rotate(-20deg); }
         .bf-br { bottom: -20px; right: -20px; transform: rotate(160deg); }
+        
+        @keyframes floatButterfly {
+            0% { transform: translateY(0px) rotate(-20deg); }
+            50% { transform: translateY(-15px) rotate(-10deg); }
+            100% { transform: translateY(0px) rotate(-20deg); }
+        }
     </style>
 </head>
 <body>
-
+    
     <audio id="myAudio" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
@@ -106,7 +112,7 @@
                 bfTL.style.display = "block";
                 bfBR.style.display = "block";
 
-                textElement.innerHTML = "makasih yaa buat semuanyaa! kamu berharga banget! ❤️";
+                textElement.innerHTML = "makasih yaa buat semuanyaa! kamuu berharga banget! ❤️";
                 nextBtn.innerHTML = "YEAYYYYY!! 🎆";
                 createExplosion(window.innerWidth / 2, window.innerHeight / 2);
                 nextBtn.onclick = triggerYayFirework;
