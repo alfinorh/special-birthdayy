@@ -34,8 +34,8 @@
 
     <div class="container">
         <div class="card">
-            <img src="butterflyy.png" class="butterfly bf-tl" id="bfTL" alt="butterfly">
-            <img src="butterflyy.png" class="butterfly bf-br" id="bfBR" alt="butterfly">
+            <img src="images/butterflyy.png" class="butterfly bf-tl" id="bfTL" alt="butterfly">
+            <img src="images/butterflyy.png" class="butterfly bf-br" id="bfBR" alt="butterfly">
 
             <h1 id="mainTitle" style="display:none; font-size: 30px;">Special for Princess 💞</h1>
             
@@ -45,7 +45,7 @@
             </div>
 
             <div class="photo-container" id="photoBox">
-                <img src="image.jpeg" id="fotoUtama" alt="Foto Kejutan">
+                <img src="images/image.jpeg" id="fotoUtama" alt="Foto Kejutan">
             </div>
             
             <div id="typewriter">pencet tombol di bawah buat ngelihat sesuatu...</div>
@@ -138,7 +138,7 @@
                     this.vy = Math.sin(angle)*force - 3;
                     this.life = 1; this.decay = Math.random()*0.01 + 0.005;
                     this.size = Math.random()*20+15;
-                    this.emoji = type === 'lily' ? '⚜️' : ['🌸', '🌸', '🌸', '🌸', '🌸'][Math.floor(Math.random()*5)];
+                    this.emoji = type === 'lily' ? '🌸' : ['💞', '🎉', '🌸', '🌸', '🌸'][Math.floor(Math.random()*5)];
                 }
                 this.friction = 0.96;
             }
